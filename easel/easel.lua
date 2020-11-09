@@ -17,28 +17,22 @@ local function log(...)
 end
 
 
-
-
--- initialize lumiere
 function M.init(self)
 	log("init")
 	time = socket.gettime()
 end
 
--- update lumiere
+
 function M.update(self)
 	local now = socket.gettime()
 	local dt = now - time
 	time = now
 
-	-- update current program
 	if current_program.update then
 		current_program.update(current_program.context, dt)
 	end
 end
 
--- handle messages
--- mainly switching of programs and handling default render messages
 function M.on_message(self, message_id, message, sender)
 	if message_id == USE_PROGRAM then
 		local id = message.id
