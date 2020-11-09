@@ -1,0 +1,12 @@
+[bootstrap]
+main_collection = /example/example.collectionc
+render = /easel/easel.renderc
+
+[render]
+clear_color_red = 0.05
+clear_color_blue = 0.1
+clear_color_green = 0.05
+
+[script]
+shared_state = 1
+

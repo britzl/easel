@@ -1,0 +1,17 @@
+local default_program = require "easel.programs.default"
+local easel = require "easel.easel"
+
+function init(self)
+	easel.init()
+
+	easel.add_program("default", default_program)
+	easel.use_program("default")
+end
+
+function update(self)
+	easel.update(self)
+end
+
+function on_message(self, message_id, message)
+	easel.on_message(self, message_id, message, sender)
+end

@@ -1,0 +1,24 @@
+local easel = require "easel.easel"
+local example_program = require "example.program"
+
+function init(self)
+	particlefx.play("#particlefx")
+	msg.post(".", "acquire_input_focus")
+	easel.add_program("example", example_program)
+end
+
+function on_input(self, action_id, action)
+	if action.pressed then
+		if action_id == hash("program1") then
+			easel.use_program("default")
+		elseif action_id == hash("program2") then
+			easel.use_program("example")
+		end
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end
