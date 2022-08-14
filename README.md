@@ -11,6 +11,9 @@ Or point to the ZIP file of a [specific release](https://github.com/britzl/easel
 # Usage
 Easel uses a concept of programs to represent the contents of an active render script. Easel programs are run from the render context and has access to all functions from the render.* namespace.
 
+## Easel render script
+To use Easel in a project the `easel/easel.render` file has to be set as the active rendered in game.project.
+
 ## Creating programs
 An Easel program is represented as a Lua table with life cycle functions:
 
