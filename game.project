@@ -10,3 +10,5 @@ clear_color_green = 0.05
 [script]
 shared_state = 1
 
+[library]
+include_dirs = easel
